@@ -8,3 +8,4 @@ The website will consist of a main html index file, a css file and javascript fi
 By the end of the project, I will have demonstrated skills in setting up a website using my knowledge around JavaScript, HTML and CSS
 
 Self-reflection and conclusion:
+project finished in the branch versionTwo, this was an opportunity to practice one more time JavaScrip form validation.
