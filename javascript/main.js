@@ -95,3 +95,68 @@ const validateInputs = () => {
         alert('High Five!');
     }
 };
+
+/* 
+Add the JavaScript code that checks validation as the user progresses through the form. When a user leaves a form field, it should automatically validate that field. */
+
+/* country.addEventListener("focus", function() {
+    console.log("Input has focus");
+}); */
+email.addEventListener("input", function() {
+    console.log("Input value changed:", email.value);
+    if(email.value === '') {
+        setError(email, 'Email is required');
+    } else if (!isValidEmail(email.value)) {
+        setError(email, 'Provide a valid email address');
+    } else {
+        setSuccess(email);
+    }
+});
+
+
+
+country.addEventListener("input", function() {
+    console.log("Input value changed:", country.value);
+    if(country.value === '') {
+        setError(country, `The country is required`);
+    } else if (!isValidCountry(country.value) || country.value.length < 4) {
+        setError(country, 'Provide a valid country name');
+    } else {
+        setSuccess(country);
+    }
+});
+
+zipCode.addEventListener("input", function() {
+    console.log("Input value changed:", zipCode.value);
+    if(zipCode.value === '') {
+        setError(zipCode, 'Zip code is required');
+    } else if (!isValidZipCode(zipCode.value) || zipCode.value.length < 5) {
+        setError(zipCode, 'Provide a valid zip code address');
+    } else {
+        setSuccess(zipCode);
+    }
+});
+
+
+password.addEventListener("input", function() {
+    console.log("Input value changed:", password.value);
+    if(password.value === '') {
+        setError(password, 'Password is required');
+    } else if (password.value.length < 8 ) {
+        setError(password, 'Password must be at least 8 character.')
+    } else {
+        setSuccess(password);
+    }
+});
+
+
+passwordConf.addEventListener("input", function() {
+    console.log("Input value changed:", country.value);
+    if(passwordConf.value === '') {
+        setError(passwordConf, 'Please confirm your password');
+    } else if (passwordConf.value !== password.value) {
+        setError(passwordConf, "Passwords doesn't match");
+    } else {
+        setSuccess(passwordConf);
+    }
+});
