@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Form Validation</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="form" action="/">
+           <h1>Registration</h1>
+           <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+           <div class="input-control">
+               <label for="country">Country</label>
+               <input id="country" name="country" type="text">
+               <div class="error"></div>
+           </div>
+           <div class="input-control">
+                <label for="zipcode">Zip Code</label>
+                <input id="zipcode" name="zipcode" type="text">
+                <div class="error"></div>
+            </div>
+           <div class="input-control">
+               <label for="password">Password</label>
+               <input id="password"name="password" type="password">
+               <div class="error"></div>
+           </div>
+           <div class="input-control">
+               <label for="passwordConf">Password Confirmation</label>
+               <input id="passwordConf"name="passwordConf" type="password">
+               <div class="error"></div>
+           </div>
+           <button type="submit">Sign Up</button>
+       </form>
+   </div>
+       <!-- 
+Build a browser form which collects Email, Country, Zip Code, Password and Password Confirmation fields. It should use live inline validation to inform the user whether a field is properly filled in or not. That means highlighting a field red and providing a helpful error message until it has been filled in properly.
+
+The form doesn’t need to actually submit, but you should give an error message if the button is pushed with any active errors or unfilled required fields. For the sake of this lesson, make sure all of the validation occurs in the JavaScript file. If all is well and the form is “submitted”, give the user a high five. -->
+<!--     <form action="#" class="formEntry" method="post">
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+        <label for="">Country:</label>
+        <input type="text">
+        <label for="">Zip Code:</label>
+        <input type="text">
+        <label for="">Password:</label>
+        <input type="text">
+        <label for="">Password Confirmation:</label>
+        <input type="text">
+    </form> -->
+        <script src="javascript/main.js"></script>
+</body>
+</html>
